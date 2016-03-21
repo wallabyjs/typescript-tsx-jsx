@@ -1,6 +1,6 @@
 module.exports = function (wallaby) {
 
-  return {debug:1,
+  return {
     files: [
       "src/client/modules/**/components/*.tsx",
       "src/client/modules/**/actions/*.ts",
