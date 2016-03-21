@@ -13,7 +13,7 @@ module.exports = function (wallaby) {
       "src/client/**/tests/*.tsx"
     ],
     compilers: {
-      "**/*.ts*": wallaby.compilers.typeScript({module: 'es6')
+      "**/*.ts*": wallaby.compilers.typeScript({module: 'es6'})
     },
     preprocessors: {
       "**/*.js*": file => require("babel-core").transform(file.content, {
