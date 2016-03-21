@@ -10,6 +10,9 @@ const MyComponent = React.createClass({
         return (
             <div>
                 {this.props.children}
+                <If condition={this.props.children.length}>
+                    <span>IfBlock</span>
+                </If>
             </div>
         );
     }
