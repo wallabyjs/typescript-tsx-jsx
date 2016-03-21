@@ -1,23 +1,8 @@
 import { shallow } from 'enzyme';
 import { expect } from 'chai';
+import MyComponent from '../mycomp'
+import MyComponent2 from "../mcomp2"
 
-const MyComponent = React.createClass({
-    propTypes: {
-        children: React.PropTypes.element.isRequired
-    },
-
-    render: function() {
-        return (
-            <div>
-                {this.props.children}
-                <If condition={this.props.children.length}>
-                    <span>IfBlock</span>
-                </If>
-            </div>
-        );
-    }
-
-});
 
 describe('<MyComponent />', () => {
 

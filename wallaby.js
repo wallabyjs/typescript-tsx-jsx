@@ -1,10 +1,10 @@
 module.exports = function (wallaby) {
 
-  return {
+  return {debug:1,
     files: [
-      "src/client/modules/**/components/*.jsx",
-      "src/client/modules/**/actions/*.js",
-      "src/client/modules/**/containers/*.js",
+      "src/client/modules/**/components/*.tsx",
+      "src/client/modules/**/actions/*.ts",
+      "src/client/modules/**/containers/*.ts",
       "src/client/modules/**/libs/*.ts",
       "src/typings/**/*.d.ts"
     ],
@@ -13,7 +13,7 @@ module.exports = function (wallaby) {
       "src/client/**/tests/*.tsx"
     ],
     compilers: {
-      "**/*.ts*": wallaby.compilers.typeScript({module: "commonjs"})
+      "**/*.ts*": wallaby.compilers.typeScript({module: "commonjs", target: "es6"})
     },
     preprocessors: {
       "**/*.js*": file => require("babel-core").transform(file.content, {
