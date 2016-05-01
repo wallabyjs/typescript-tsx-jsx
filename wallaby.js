@@ -15,7 +15,8 @@ module.exports = function (wallaby) {
       "src/client/**/tests/*.js"
     ],
     compilers: {
-      "**/*.ts*": wallaby.compilers.typeScript({module: 'es6'})
+      "**/*.ts*": wallaby.compilers.typeScript({module: 'es6'}),
+      "**/*.js*": wallaby.compilers.babel({presets: ["es2015", "stage-2", "react"]})
     },
     preprocessors: {
       "**/*.js*": file => require("babel-core").transform(file.content, {
