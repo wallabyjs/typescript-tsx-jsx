@@ -6,11 +6,13 @@ module.exports = function (wallaby) {
       "src/client/modules/**/actions/*.ts",
       "src/client/modules/**/containers/*.ts",
       "src/client/modules/**/libs/*.ts",
-      "src/typings/**/*.d.ts"
+      "src/typings/**/*.d.ts",
+      "src/client/modules/**/babelCode/*.js"
     ],
     tests: [
       "src/client/**/tests/*.ts",
-      "src/client/**/tests/*.tsx"
+      "src/client/**/tests/*.tsx",
+      "src/client/**/tests/*.js"
     ],
     compilers: {
       "**/*.ts*": wallaby.compilers.typeScript({module: 'es6'})
